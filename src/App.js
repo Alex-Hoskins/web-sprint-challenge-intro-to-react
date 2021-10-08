@@ -10,14 +10,19 @@ const StyledContainer = styled.div`
   justify-content:center;
   align-items:center;
   flex-direction:column;
+  font-family: sans-serif;
+  box-sizing:border-box;
 
   .styledCharContainer{
   border:1px solid #d2d7df;
-  background-image: url(https://images.unsplash.com/photo-1588802822758-c3ccfa682d8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-  color:#d2d7df;
-  width:25%;
-  font-family: 'Shadows Into Light', cursive;
- 
+  background-color:#FCFCF7;
+  width:25%; 
+  border: ridge gold;
+  border-radius: 13em/3em;
+  color: #443e3e;
+  text-shadow: 1px 1px 5px red;
+  box-sizing:border-box;
+}
   }
 `
 
@@ -50,7 +55,7 @@ const App = () => {
       <div className="styledCharContainer">
         {
           starWarsData.map(char => {
-            return <Character char={char} key={char.height} />
+            return <Character char={char} key={char.height} starWarsData={starWarsData}/>
           })
         }
       </div>
