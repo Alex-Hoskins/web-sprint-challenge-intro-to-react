@@ -4,6 +4,23 @@ import axios from 'axios';
 import Character from './components/Character.js';
 import styled from 'styled-components';
 
+
+const StyledContainer = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  .styledCharContainer{
+  border:1px solid #d2d7df;
+  background-image: url(https://images.unsplash.com/photo-1588802822758-c3ccfa682d8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  color:#d2d7df;
+  width:25%;
+ 
+  }
+`
+
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -25,15 +42,20 @@ const App = () => {
   console.log(starWarsData)
 
   return (
+    
     <div className="App">
+    <StyledContainer>
       <h1 className="Header">Characters</h1>
-      {/* {starWarsData && starWarsData.map(char)=> <Character char={char}/>} */}
-      {
-        starWarsData.map(char => {
-          return <Character char={char} key={char.height} />
-        })
-      }
+      <div className="styledCharContainer">
+        {
+          starWarsData.map(char => {
+            return <Character char={char} key={char.height} />
+          })
+        }
+      </div>
+    </StyledContainer>
     </div>
+    
   );
 }
 
