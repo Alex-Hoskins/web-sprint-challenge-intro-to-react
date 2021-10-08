@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 
+
+
 const StyledContain = styled.div`
  
  div{
@@ -15,25 +17,28 @@ const StyledContain = styled.div`
  }
 
 
+ 
  button{
     padding:5px;
     border-radius:10px;
     background-color:#443e3e;
     color:gold;
     height:50%;
+    :hover{cursor: url(https://cur.cursors-4u.net/others/oth-1/oth21.ani), url(https://cur.cursors-4u.net/others/oth-1/oth21.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/07/07/oth21-11.html" target="_blank" title="Star Wars Lightsaber Spinning"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Star Wars Lightsaber Spinning" style="position:absolute; top: 0px; right: 0px;" /></a>
+    }
   }
   p{
       background-color:black;
       color:green;
       text-shadow: 1px 1px 5px green;
-      
-      border-bottom:1px solid black;
+      border-style:double;
       padding-right:20px;
       padding-left:50px;
       padding-bottom:20px;
       padding-top:20px;
       text-align:left;
       font-family: 'Special Elite', cursive;
+      margin:5px;
   }
  `
 
