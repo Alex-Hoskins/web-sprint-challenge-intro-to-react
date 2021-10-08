@@ -13,17 +13,23 @@ const StyledContainer = styled.div`
   font-family: sans-serif;
   box-sizing:border-box;
 
+  h1{
+    font-size:5rem;
+  }
+
   .styledCharContainer{
   border:1px solid #d2d7df;
   background-color:#FCFCF7;
-  width:25%; 
+  width:350px; 
   border: ridge gold;
   border-radius: 13em/3em;
   color: #443e3e;
-  text-shadow: 1px 1px 5px red;
+  text-shadow: 1px 1px 5px gold;
   box-sizing:border-box;
-}
+  margin-bottom:5%;
   }
+
+  
 `
 
 
