@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character.js';
+import LastCharacter from './components/LastCharacter.js'
 import styled from 'styled-components';
 
 
@@ -52,7 +53,8 @@ const App = () => {
   }, [])
 
   console.log(starWarsData)
-  const lastItem = starWarsData[starWarsData.length]
+  const lastItem = starWarsData[starWarsData.length-1]
+  console.log('lastItem', lastItem)
 
   return (
     
@@ -62,7 +64,11 @@ const App = () => {
       <div className="styledCharContainer">
         {
           starWarsData.map(char => {
-            return <Character char={char} key={char.height}/>
+            if(char === lastItem){
+              return <LastCharacter char={char} key={char.height}/>
+            }else{
+              return <Character char={char} key={char.height}/>
+            }
           })
         }
       </div>
